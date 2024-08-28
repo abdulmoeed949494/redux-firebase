@@ -9,7 +9,7 @@ const Logout = () => {
   const handleLogout = (e) => {
     e.preventDefault();
 
-    dispatch(logout())git
+    dispatch(logout())
     
   };
 

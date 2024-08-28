@@ -1,4 +1,4 @@
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -8,9 +8,9 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const createNewAccount = () => {
-    // navigate("/signup");
+    navigate("/signup");
   };
 
   const dispatch = useDispatch();
@@ -34,7 +34,7 @@ const Login = () => {
           <input
             className="emailinput pl-2"
             type="email"
-            placeholder="Email address"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

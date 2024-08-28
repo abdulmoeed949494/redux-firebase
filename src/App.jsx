@@ -3,6 +3,7 @@ import Login from "./Components/Login";
 import Logout from "./Components/Logout";
 import { useSelector } from "react-redux";
 import { selectUser } from "./features/userSlice";
+import Signup from "./Components/Signup";
 
 function App() {
   const user = useSelector(selectUser)
@@ -11,7 +12,7 @@ function App() {
         <Routes>
           {user ? <Route path="/logout" element={<Logout />} /> :
           <Route path="/" element={<Login />} /> }
-          {/* <Route path="/signup" element={<Signup />} /> */}
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
   );
